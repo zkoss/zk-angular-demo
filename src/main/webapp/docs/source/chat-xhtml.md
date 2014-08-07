@@ -1,0 +1,71 @@
+<markdown><!-- 
+``` html
+<html xmlns:ng="http://angularjs.org" xmlns="native" xmlns:u="zul">
+	<head>
+		// put your JS library and CSS library here, if any
+	</head>
+	<body>
+		<u:div id="myWin" hflex="1" apply="org.zkoss.angular.AngularComposer"
+		binder="@init(value='org.zkoss.angular.AngularBinder', queueScope='application')"
+		viewModel="@id('vm') @init('demo.chat.ChatRoomViewModel')"
+		ng:controller="MyCtl" ng:chatList="@load(vm.chatList)"
+		ng:users="@load(vm.users)">
+			<div class="panel panel-info">	
+				<div class="panel-heading">
+					<div class="panel-title">ZK Angular Chat Room
+							<span ng-show="users" class="badge pull-right">Online: ({{users}})</span>
+					</div>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-xs-6">
+							<form name="myForm" class="form-horizontal">
+								<div class="form-group">
+									<label class="col-sm-3 control-label">Username:</label>
+									<div class="col-sm-8">
+										<input type="text" name="username" ng-disabled="myForm.hasUserName"
+											ng:model="username" class="form-control"
+											placeholder="Enter a name here" ng-required="true"/>
+										<div class="tooltip bottom ng-invalid" ng-show="myForm.username.$error.required">
+											<div class="tooltip-arrow"/>
+											<div class="tooltip-inner">Required!</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">Message:</label>
+									<div class="col-sm-8">
+										<input type="text" ng:model="message" name="message"
+											class="form-control" ng-required="true"/>
+										<div class="tooltip bottom ng-invalid"  ng-show="myForm.message.$error.required">
+											<div class="tooltip-arrow"/>
+											<div class="tooltip-inner">Required!</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-offset-3 col-sm-6">
+									<button class="btn btn-primary"
+										ng-disabled="!myForm.$dirty || myForm.$invalid"
+										ng-click="@global-command('send', {username:username, message:message}); myForm.hasUserName=true;">Send</button>
+								</div>
+							</form>
+						</div>
+						<div class="col-xs-6">
+							<div id="scrollBottom" ng-show="chatList"
+								style="height:600px; overflow:auto; border: 1px solid #ddd;border-radius: 5px;padding: 20px;">
+								
+								<div ng-repeat="item in chatList" class="well well-sm">
+									<label ng-bind="item.username" style="color: blue" />:
+									<span ng-bind="item.text"/>
+									<span class="pull-right" ng-bind="item.time"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</u:div>
+	</body>
+</html>
+```
+ --></markdown>

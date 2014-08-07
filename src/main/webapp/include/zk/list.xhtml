@@ -1,0 +1,36 @@
+<?taglib uri="http://www.zkoss.org/dsp/zk/core" prefix="c"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="w"?>
+<zk:zk xmlns:ng="http://angularjs.org" lang="en" xmlns="native"
+	xmlns:u="zul" xmlns:zk="zk" xmlns:ca="client/attribute">
+	<div class="bs-callout bs-callout-info" ng-show="selectedCar">
+		<image ng-src="{{selectedCar.preview | encodeURL}}" style="padding:10px" />
+		<u:vbox hflex="1">
+			<u:hlayout>
+		Model : <span style="font-weight: bold">{{selectedCar.model}}</span>
+			</u:hlayout>
+			<u:hlayout>
+		Make : <span style="font-weight: bold">{{selectedCar.make}}</span>
+			</u:hlayout>
+			<u:hlayout>
+		Price : 
+		<span>$ <span style="font-weight: bold">{{selectedCar.price
+						| number}}</span></span>
+			</u:hlayout>
+			<u:groupbox title="Description" mold="3d" hflex="1">
+				<p class="text-warning" style="font-style: italic">{{selectedCar.description}}</p>
+			</u:groupbox>
+			<button ng-click="edit(selectedCar)" class="btn btn-primary">Edit</button>
+		</u:vbox>
+		<u:button label="ZK Button">
+			<zk:attribute name="onClick">
+			//alert(vm.keyword);
+			org.zkoss.zul.Label msg = new org.zkoss.zul.Label("insertBefore");
+			org.zkoss.zul.Label msg2 = new org.zkoss.zul.Label("appendChild");
+			self.getParent().insertBefore(msg, self);
+			msg2.setParent(self.getParent());
+			</zk:attribute>
+		</u:button>
+	</div>
+	<div class="bs-callout bs-callout-info" ng-hide="selectedCar">
+		Select car from list</div>
+</zk:zk>

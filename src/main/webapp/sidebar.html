@@ -1,0 +1,9 @@
+<div class="sidebar">
+	<a ng-click="setSelectedItem(null)" class="sidebar-title">{{title}}</a>
+	<ul class="sidebar-nav">
+		<li ng-repeat="navItem in navItems">
+           <!-- ngIf: navItem.extra.href -->
+           <a ng-if="$index != 0" tabindex="2" ng-click="setSelectedItem(navItem)">{{$index}} - {{navItem.title}}</a>
+         </li>
+	</ul>
+</div>

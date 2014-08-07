@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<!-- MVVM Tutorial -->
+	<!-- 7.0.0 -->
+
+	<client-config>
+		<debug-js>true</debug-js>
+	</client-config>
+	
+	<!-- 
+	<listener>
+		<listener-class>demo.WebAppInit</listener-class>
+	</listener>
+	<library-property>
+	   <name>org.zkoss.bind.AnnotateBinder.class</name>
+	   <value>org.zkoss.zkmax.bind.impl.AnnotateBinderEx</value>
+	</library-property> -->
+</zk>

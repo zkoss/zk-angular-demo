@@ -1,0 +1,94 @@
+html, body {
+  position:relative;
+  height:100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Open Sans";
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: normal;
+}
+
+p > code,
+code.highlighted {
+  background:#f4f4f4;
+  border-radius:5px;
+  padding:2px 5px;
+  color:maroon;
+}
+
+ul + p {
+  margin-top: 10px;
+}
+
+h1 + ul, h1 + ul > li,
+h2 + ul, h2 + ul > li,
+ul.tutorial-nav, ul.tutorial-nav > li,
+.usage > ul, .usage > ul > li,
+ul.methods, ul.methods > li,
+ul.events, ul.events > li {
+  list-style:none;
+  padding:0;
+}
+
+p > code,
+code.highlighted {
+  background:#f4f4f4;
+  border-radius:5px;
+  padding:2px 5px;
+  color: #333333;
+}
+.runnable-example-tabs {
+  margin-top:10px;
+  margin-bottom:20px;
+  .btn {
+	  color:#428bca;
+	  position: relative;
+	  width: auto;
+	  display: inline-block;
+	  margin: 0 0 2px;
+	  overflow: hidden;
+	  border: 1px solid #e5e5e5;
+	  -webkit-border-radius: 4px;
+	  -moz-border-radius: 4px;
+	  -ms-border-radius: 4px;
+	  -o-border-radius: 4px;
+	  border-radius: 4px;
+	  font-family: "Open Sans";
+	  font-weight: 600;
+	  height: auto;
+	  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+	  background-image: -webkit-linear-gradient(#ffffff, #f2f2f2);
+	  background-image: -moz-linear-gradient(#ffffff, #f2f2f2);
+	  background-image: -o-linear-gradient(#ffffff, #f2f2f2);
+	  background-image: linear-gradient(#ffffff, #f2f2f2);
+	}
+	
+	.btn + .btn {
+	  margin-left:10px;
+	} 
+
+	.btn:hover {
+	  color:black!important;
+	  border: 1px solid #ddd!important;
+	  background:white!important;
+	}
+		
+}
+
+h2 {
+  border-top:1px solid #eee;
+  margin-top:30px;
+  padding-top:30px;
+}
+.view-source, .improve-docs {
+  position:relative;
+  z-index:100;
+}
+
+.view-source {
+  margin-right:10px;
+}

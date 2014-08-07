@@ -1,0 +1,47 @@
+<markdown><!-- 
+``` html
+<?taglib uri="http://www.zkoss.org/dsp/zk/core" prefix="c"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="w"?>
+<html xmlns:ng="http://angularjs.org" lang="en" xmlns="native"
+	xmlns:u="zul" xmlns:zk="zk">
+<head>
+	<link rel="stylesheet"
+		href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+	<link rel="stylesheet"
+		href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="${w:encodeURL('/css/bs-doc.css')}" />
+</head>
+<body class="ng-cloak">
+	<u:div id="myWin" hflex="1"
+		apply="org.zkoss.angular.AngularComposer"
+		binder="@init(value='org.zkoss.angular.AngularBinder')"
+		viewModel="@id('vm') @init('demo.getting_started.mvvm.SearchViewModel')"
+		ng:controller="MyCtl" ng:carList="@load(vm.carList)">
+		<div class="panel panel-default">
+
+			<div class="panel-heading"><div class="panel-title">ZK Angular Master Detail</div></div>
+			<div class="panel-body">
+
+				<div class="row">
+					<div class="col-xs-6">
+						Keyword: <input type="text" ng:model="@bind(vm.keyword)"
+							ng:change="@command('search')" class="form-control"
+							placeholder="Enter a keyward here" />
+						<ul class="list-group">
+							<li ng:repeat="car in carList" class="list-group-item"
+								ng-class="{active : isSelected(car)}"
+								ng-click="setSelected(car)">
+								<h4 class="list-group-item-heading" ng-bind="car.model"></h4> <span
+								class="list-group-item-text" ng-bind="car.make"></span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-6" zk-ng-include="view"></div>
+				</div>
+			</div>
+		</div>
+	</u:div>
+</body>
+</html>
+```
+ --></markdown>

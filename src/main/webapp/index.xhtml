@@ -1,0 +1,52 @@
+<?taglib uri="http://www.zkoss.org/dsp/zk/core" prefix="c"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="w"?>
+<html xmlns:ng="http://angularjs.org" lang="en" xmlns="native"
+	xmlns:u="zul" xmlns:zk="zk">
+<zkhead>
+<title>ZK Angular Demo</title>
+<link rel="shortcut icon" type="image/ico" href="${w:encodeURL('/img/favicon.ico')}" />
+<link rel="stylesheet" href="${w:encodeURL('/css/bootstrap.min.css')}" />
+<link rel="stylesheet" href="${w:encodeURL('/css/default.min.css')}" />
+<link rel="stylesheet" href="${w:encodeURL('/less/index.less')}" />
+<script src="${w:encodeURL('/js/js.dsp')}" />
+</zkhead>
+<body>
+	<u:div ng:controller="DemoCtl" class="wrapper">
+	<header class="navbar navbar-static-top" role="banner">
+		<div class="container header">
+			<div class="navbar-header ">
+				<a href="http://www.zkoss.org" class="logo">
+					<img class="AngularJS-small" src="${w:encodeURL('/img/AngularJS-small.png')}"/>
+				</a>
+				<a id="aS6Q8" class="download z-a" href="https://github.com/zkoss/zk-angular/releases"></a>
+			</div>
+		</div>
+	</header>
+	
+	<section class="main container" role="main">
+		<div class="main-grid">
+			<div class="grid-left">
+				<div ng-include="'sidebar.html'"/>
+			</div>
+			<div class="grid-right">
+				<div zk-ng-include="doc.path"/>
+			</div>
+		</div>
+	</section>
+	
+	<footer class="footer">
+		<div class="container">
+        <p class="pull-right"><a onClick='$("html, body").animate({ scrollTop: 0 }, 500);'>Back to top</a></p>
+		  <div class="contacts">
+		  	<a href="http://www.zkoss.org/support/about" title="About Us">About Us</a> | 
+            <a href="http://www.zkoss.org/support/about/contact" title="Contact Us">Contact Us</a>
+          </div>
+		&amp;copy; 2014 Potix Corporation. All rights reserved.<br/>
+		ZK is a registered trademark of Potix Corporation.
+      </div>
+	</footer>
+	
+	</u:div>
+	<script src="${w:encodeURL('/js/app.js')}" />
+</body>
+</html>
