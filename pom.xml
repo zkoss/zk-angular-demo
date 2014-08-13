@@ -8,7 +8,7 @@
 		<zk.version>7.0.3.FL.20140801</zk.version>
 		<commons-lang>2.6</commons-lang>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
-		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
+		<packname>-${project.version}-${maven.build.timestamp}</packname>
 		<servlet.version>2.5</servlet.version>
 	</properties>
 	<packaging>war</packaging>

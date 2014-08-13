@@ -2,7 +2,7 @@
 
 # Master-detail Demo
 
-The master-detail demo demonstrates how to use ZK Angular to build a CRUD demo
+This master-detail demo demonstrates how to use ZK Angular to build a CRUD demo
  
 <div class="runnable-example" ng-show="doc.sourceItems">
 	<nav class="runnable-example-tabs">

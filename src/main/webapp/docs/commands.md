@@ -2,7 +2,7 @@
 # Send Server Side Commands
 
 Sometimes the developer wants to send a command from client to server to do something,
-then he can use the syntax `@command` and `@global-command`.
+in this case, the developer can use the syntax `@command` and `@global-command`.
 
 * `@command(expression)` (send a commnd to server)
 	 - **Usage:** The expression can be applied to *ng-BrowserEvents*, such as (`ng-click`, `ng-change`, `ng-mousedown`, and so on.)
@@ -52,11 +52,11 @@ then he can use the syntax `@command` and `@global-command`.
 	 and then it will automatically be converted from a JavaScript Object to the Java Object `Car`, which
 	 is received from `@BindingParam("car")`
 	 
-	 For more details about the `@command(expression)`, please refer to the document. <a href="http://books.zkoss.org/wiki/ZK%20Developer's%20Reference/MVVM/Syntax/Data%20Binding/@command" target="_blank">ZK MVVM @Command</a>
+	 For more details about the `@command(expression)`, please refer to the document <a href="http://books.zkoss.org/wiki/ZK%20Developer's%20Reference/MVVM/Syntax/Data%20Binding/@command" target="_blank">ZK MVVM @Command</a>
 
 * `@global-command(expression)` (send a global scope commnd to server)
-	 - **Usage:** The expression can be used as the same as `@command`, the only different
-	 is that the `global-command` will send through the ZK global scope (cross different ViewModels) not only within a local scope (single ViewModel).
+	 - **Usage:** The expression can be used as the same as `@command`, the only difference
+	 is that the `global-command` will send through the ZK global scope (across different ViewModels) instead of only within a local scope (single ViewModel).
 	 
 	 For example,
 	
@@ -77,7 +77,7 @@ then he can use the syntax `@command` and `@global-command`.
 				}
 			}
 	 
-	 For more details about the `@global-command(expression)`, please refer to the document. <a href="http://books.zkoss.org/wiki/ZK%20Developer's%20Reference/MVVM/Syntax/Data%20Binding/@global-command" target="_blank">ZK MVVM @GlobalCommand</a>
+	 For more details about`@global-command(expression)`, please refer to the document <a href="http://books.zkoss.org/wiki/ZK%20Developer's%20Reference/MVVM/Syntax/Data%20Binding/@global-command" target="_blank">ZK MVVM @GlobalCommand</a>
 ## Related Topics
 
 * [ZK MVVM Commands](http://books.zkoss.org/wiki/ZK_Developer's_Reference/MVVM/ViewModel/Commands)

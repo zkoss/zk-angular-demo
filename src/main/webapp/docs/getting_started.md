@@ -8,7 +8,7 @@
 	* [Download 7.0.3.FL.20140801 and later version](http://www.zkoss.org/download/zk)
 	* [Download ZK Angular](https://github.com/zkoss/zk-angular/releases)
 
-* Or using Maven project
+* Or use Maven project
 
 	1. Run the following command to generate a ZK web app with [Maven](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
 				
@@ -56,7 +56,7 @@
 				<version>0.8.0</version>
 			</dependency>
 	
-For more details about how to install Eclipse with ZK, please refer to this [ZK Installation Guide](http://books.zkoss.org/wiki/ZK%20Installation%20Guide/Setting%20up%20IDE)
+For more details regarding how to install Eclipse with ZK, please refer to this [ZK Installation Guide](http://books.zkoss.org/wiki/ZK%20Installation%20Guide/Setting%20up%20IDE)
 
 ### Declaring Domain Class
 
@@ -82,9 +82,9 @@ __`BasicViewModel.java`__
 		}
 	}
 
-As you can see the above, we declare the annotation __@NotifyChange__ for the `setFirstName(String firstName)` to
-notify the variable of __fullName__ has changed, while the method `setFirstName(String firstName)` being invoked.
-And then the view area of that variable binding `vm.fullName` will also get up to date.
+As you can see from the above, we declare the annotation __@NotifyChange__ for `setFirstName(String firstName)` to
+notify the variable of __fullName__ has changed, while the method `setFirstName(String firstName)` has been invoked.
+And then the view area of that variable binding `vm.fullName` will also be updated.
 	
 ### Declaring HTML template
 
@@ -108,21 +108,21 @@ __`basic.zhtml`__
 	</body>
 	</html>
 
-Here we used is a HTML template with the three namespace as follows:
+Here we used a HTML template with the three namespaces as follows:
 
 * __angular__: `xmlns:ng="http://angularjs.org"`
 
-	The namespace is the same as that of Angularjs and will be handled by ZK Angular parser.
+	This namespace is the same as that of Angularjs and will be handled by ZK Angular parser.
 * __native__: `xmlns="native"`
 
-	The namespace is used to be interpreted as a native tag that will be sent to the browser directly, rather than becoming a ZK component.
+	This namespace is used to be interpreted as a native tag that will be sent to the browser directly, rather than becoming a ZK component.
 * __zul__: `xmlns:u="zul"`
 
-	The namespace is used to be interpreted as a ZK component.
+	This namespace is used to be interpreted as a ZK component.
 	
-And we use two-way data binding for the input element with `ng:model="@bind(vm.firstName)"` to synchronize the data _vm.firstName_ from server to client and vise versa.
+We use two-way data binding for the input element with `ng:model="@bind(vm.firstName)"` to synchronize the data _vm.firstName_ from server to client and vice versa.
 And then use one-way data binding for the fullName with `<label ng:bind="@load(vm.fullName)"></label>` to
-load once the _fullName_ of the ViewModel has changed.
+load once the _fullName_ of the ViewModel has been changed.
 ### Declaring JavaScript controller
 
 __`App.js`__
@@ -141,7 +141,7 @@ All you need to do is to include the `zk` module by the following command `angul
 and then initial the ZK Binder within the controller code `$binder.$init($scope, $element);`
 and then bootstrap the angular app in the function `zk.afterMount` that will be invoked after ZK mounted.
 ### Running the Demo
-After start with the web server, you can visit the page `http://localhost:8080/zkangulardemo/index.zhtml` to see the following result.
+After starting the web server, you can visit your page at `http://localhost:8080/zkangulardemo/index.zhtml` to see the following result.
 <div class="runnable-example" ng-show="doc.sourceItems">
 	<div class="runnable-example-file" ng-show="demoActiveTabIndex==$index" ng-repeat="source in doc.sourceItems"
 		zk-ng-include="source.path"/>

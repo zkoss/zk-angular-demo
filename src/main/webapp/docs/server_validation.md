@@ -2,7 +2,7 @@
 # Server Side Validation
 
 [AngularJS's Form](https://docs.angularjs.org/guide/forms) provides some validation services 
-that the user can be notified of invalid input at client side to do a dirty check with a form.
+in which users are notified of invalid input at the client side to do a dirty check of the form.
 ZK Angular also provides a validation way with or without [JSR 303](http://docs.oracle.com/javaee/6/tutorial/doc/gircz.html) at server side.
 
 ### Validation Demo with JSR 303
@@ -22,15 +22,15 @@ ZK Angular also provides a validation way with or without [JSR 303](http://docs.
 	
 * __`ValidationViewModel.java`__:
 
-	Here we use the class of `javax.validation.constraints.Size` to check if the returned
+	Here we use the class `javax.validation.constraints.Size` to check if the returned
 	value after invoking `getFirstName()` is less than 3 characters, and
 	then show the message with _"First name is too short (minimum is 3 characters)"_
 	
 ### Summary
 
-For a secure application, the both validations, client and server, are necessary, and
-the developer can depend on getting better user experience to choose which validation
-needs an instant feedback then put it at client side, if the validation takes some times then put it at server side to check.
+For a secure application, validations of both the client and the server are necessary. Depending on what suits a particular user experience better, the developer can 
+choose which validation is used on what. For example if the validation needs an instant feedback such as password strength, the developer may choose to use client validation. 
+If the validation may take some time for example checking a username, then it is probably more suitable to use server validation.  
 
 ## Related Topics
 

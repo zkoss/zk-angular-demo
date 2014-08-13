@@ -2,9 +2,9 @@
 
 # Chat Room Demo
 
-The chat room demo demonstrates how to use ZK Angular to build a server push demo.
+This chat room demo demonstrates how to use ZK Angular to build a server push demo.
 
-You can use two browsers to chat each other with different user name.
+You can use two browsers to chat with each other using different usernames.
  
  <div class="runnable-example" ng-show="doc.sourceItems">
 	<nav class="runnable-example-tabs">
@@ -14,4 +14,4 @@ You can use two browsers to chat each other with different user name.
 		zk-ng-include="source.path"/>
 </div>
 
---></markdown>
+--></markdown> 
