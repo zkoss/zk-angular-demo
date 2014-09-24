@@ -3,11 +3,14 @@
 <html xmlns:ng="http://angularjs.org" lang="en" xmlns="native"
 	xmlns:u="zul" xmlns:zk="zk">
 <zkhead>
-<title>ZK Angular Demo</title>
+<meta content="A ZK extension for AngularJS" name="description"/>
+<meta content="ZK, AngularJS, JQuery, ZK MVVM" name="keywords"/>
+<title>ZK AngularJS Demo</title>
 <link rel="shortcut icon" type="image/ico" href="${w:encodeURL('/img/favicon.ico')}" />
 <link rel="stylesheet" href="${w:encodeURL('/css/bootstrap.min.css')}" />
 <link rel="stylesheet" href="${w:encodeURL('/css/default.min.css')}" />
 <link rel="stylesheet" href="${w:encodeURL('/less/index.less')}" />
+
 <script src="${w:encodeURL('/js/js.dsp')}" />
 </zkhead>
 <body>
@@ -15,7 +18,7 @@
 	<header class="navbar navbar-static-top" role="banner">
 		<div class="container header">
 			<div class="navbar-header ">
-				<a href="http://www.zkoss.org" target="_self" class="logo">
+				<a href="http://www.zkoss.org" target="_self" class="logo" title="ZK AngularJS">
 					<img class="AngularJS-small" src="${w:encodeURL('/img/AngularJS-small.png')}"/>
 				</a>
 				<a id="aS6Q8" class="download z-a" href="https://github.com/zkoss/zk-angular/releases"></a>
@@ -48,5 +51,25 @@
 	
 	</u:div>
 	<script src="${w:encodeURL('/js/app.js')}" />
+	<u:script if='${execution.serverName == "www.zkoss.org" or execution.serverName == "www.potix.com"}'><![CDATA[
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+var gafn = function () {
+if (window._gat) {
+	gafn = null;
+	try {
+		var pageTracker = _gat._getTracker("UA-121377-3");
+		pageTracker._setDomainName("zkoss.org");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+
+	} catch (e) {
+	}
+} else
+	setTimeout(gafn, 1000);
+};
+gafn();
+]]></u:script>
 </body>
 </html>
