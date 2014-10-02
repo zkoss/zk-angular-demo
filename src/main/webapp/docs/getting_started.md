@@ -5,8 +5,8 @@
 ### Install ZK Angular
 
 * Download the jar files into your web project.
-	* [Download 7.0.3.FL.20140801 and later version](http://www.zkoss.org/download/zk)
-	* [Download ZK Angular](https://github.com/zkoss/zk-angular/releases)
+	* <a href="http://www.zkoss.org/download/zk" target="_self">Download 7.0.3.FL.20140801 and later version</a>
+	* <a href="https://github.com/zkoss/zk-angular/releases" target="_self">Download ZK Angular</a>
 
 * Or use Maven project
 

@@ -13,7 +13,7 @@ As you can see from the diagram above, we utilize __AngularJS__'s template engin
 generate the HTML result to the browser, and communicate with __ZK MVVM__'s data binding to
 receive and store the data back to the server side. This way, the developer can define their
 HTML as a UI template and make-up the page as any kind of web page with a library, such as [Twitter Bootstrap][bootstrap].
-The role of [ZK][zk] in this case is a server side data binder (communicator) that help developers save development time
+The role of <a href="http://www.zkoss.org" target="_self">ZK</a> in this case is a server side data binder (communicator) that help developers save development time
 to communicate the data from server to client and client to server.
 
 ## The basic demo
@@ -54,7 +54,6 @@ The following explains how it works:
 Since vm.fullName was used in the template (step 4), it will also be notified. 
 6. Now, we can run with <a class="btn btn-default" ng-click="setTab(3, 'Demo')">the demo</a>
 [angularjs]: https://angularjs.org/
-[zk]: http://www.zkoss.org
 [mvvm]: http://books.zkoss.org/wiki/ZK%20Developer's%20Reference/MVVM
 [bootstrap]: http://getbootstrap.com/
 --></markdown>
